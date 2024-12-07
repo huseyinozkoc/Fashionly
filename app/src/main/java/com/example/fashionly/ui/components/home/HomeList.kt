@@ -112,15 +112,15 @@ val homeChipData: List<HomeChipModel> = listOf(
     HomeChipModel(
         chipText = "All",
         items = listOf(
-            HomeListItemModel(R.drawable.model6, "Modern Light Clothes", "T-Shirt", "$212.99", "4.5"),
+            HomeListItemModel(R.drawable.model14, "Modern Light Clothes", "T-Shirt", "$212.99", "4.5"),
             HomeListItemModel(R.drawable.model7, "Elegant Dress", "Dress", "$150.00", "4.8"),
             HomeListItemModel(R.drawable.model8, "Casual Pants", "Pants", "$99.99", "4.2"),
             HomeListItemModel(R.drawable.model9, "Running Shoes", "Shoes", "$120.00", "4.7"),
             HomeListItemModel(R.drawable.model10, "Summer T-Shirt", "T-Shirt", "$45.00", "4.3"),
             HomeListItemModel(R.drawable.model11, "Winter Jacket", "Jacket", "$300.00", "4.9"),
-            HomeListItemModel(R.drawable.model6, "Formal Suit", "Suit", "$500.00", "4.6"),
-            HomeListItemModel(R.drawable.model7, "Casual Shirt", "Shirt", "$60.00", "4.4"),
-            HomeListItemModel(R.drawable.model8, "Sportswear", "Activewear", "$80.00", "4.7"),
+            HomeListItemModel(R.drawable.model12, "Formal Suit", "Suit", "$500.00", "4.6"),
+            HomeListItemModel(R.drawable.model13, "Casual Shirt", "Shirt", "$60.00", "4.4"),
+            HomeListItemModel(R.drawable.model14, "Sportswear", "Activewear", "$80.00", "4.7"),
             HomeListItemModel(R.drawable.model9, "Denim Jacket", "Jacket", "$120.00", "4.5")
         )
     ),
