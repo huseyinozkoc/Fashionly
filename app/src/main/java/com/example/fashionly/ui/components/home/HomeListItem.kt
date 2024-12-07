@@ -78,7 +78,7 @@ fun HomeListItem(
                     Image(
                         painter = painterResource(id = imageSource),
                         contentDescription = "Image",
-                        contentScale = androidx.compose.ui.layout.ContentScale.FillBounds,
+                        contentScale = androidx.compose.ui.layout.ContentScale.Crop,
                         modifier = Modifier.fillMaxSize(),
                     )
 
@@ -163,7 +163,7 @@ fun HomeListItem(
 fun HomeListItemPreview() {
     MaterialTheme {
         HomeListItem(
-            imageSource = com.example.fashionly.R.drawable.model,
+            imageSource = com.example.fashionly.R.drawable.model9,
             nameText = "Modern Light Clothes",
             typeText = "T-Shirt",
             priceText = "$212.99",
