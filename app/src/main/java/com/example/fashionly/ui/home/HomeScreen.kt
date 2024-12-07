@@ -2,7 +2,10 @@ package com.example.fashionly.ui.home
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -15,6 +18,11 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.fashionly.ui.components.EmptyScreen
 import com.example.fashionly.ui.components.LoadingBar
+import com.example.fashionly.ui.components.home.HomeChipModel
+import com.example.fashionly.ui.components.home.HomeListComponent
+import com.example.fashionly.ui.components.home.HomeSearchComponent
+import com.example.fashionly.ui.components.home.HomeWelcomeComponent
+import com.example.fashionly.ui.components.home.homeChipData
 import com.example.fashionly.ui.home.HomeContract.UiAction
 import com.example.fashionly.ui.home.HomeContract.UiEffect
 import com.example.fashionly.ui.home.HomeContract.UiState
@@ -48,18 +56,16 @@ fun HomeScreen(
 @Composable
 fun HomeContent(onAction: (UiAction) -> Unit) {
 
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .clickable(onClick = {
-                onAction(UiAction.NavigateToDetail)
-            }),
-        contentAlignment = Alignment.Center,
-    ) {
-        Text(
-            text = "Home Content",
-            fontSize = 24.sp,
-        )
+    LazyColumn(modifier = Modifier.fillMaxSize()) {
+        item {
+            HomeWelcomeComponent()
+        }
+        item {
+            HomeSearchComponent()
+        }
+        item {
+            HomeListComponent(homeChipData)
+        }
     }
 }
 
