@@ -71,7 +71,7 @@ fun HomeListItem(
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(LocalConfiguration.current.screenHeightDp.dp / 5)
+                        .height(LocalConfiguration.current.screenHeightDp.dp / 4.3f)
                         .clip(androidx.compose.foundation.shape.RoundedCornerShape(16.dp)),
                     contentAlignment = Alignment.TopEnd
                 ) {
