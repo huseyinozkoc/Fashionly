@@ -92,7 +92,8 @@ fun HomeSearchComponent() {
                     FloatingActionButton(
                         onClick = { /*TODO: Add action*/ },
                         containerColor = Color.Black.copy(alpha = 0.90f),
-                        contentColor = Color.White
+                        contentColor = Color.White,
+                        modifier = Modifier.align(Alignment.BottomEnd)
                     ) {
                         Icon(
                             modifier = Modifier.size(24.dp),
