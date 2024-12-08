@@ -27,6 +27,7 @@ import com.example.fashionly.ui.checkout.CheckoutContract.UiAction
 import com.example.fashionly.ui.checkout.CheckoutContract.UiEffect
 import com.example.fashionly.ui.checkout.CheckoutContract.UiState
 import com.example.fashionly.ui.components.checkout.CheckoutPayButton
+import com.example.fashionly.ui.components.checkout.CheckoutTopBar
 import com.example.fashionly.ui.components.detail.DetailScreenAddCardButton
 import com.example.fashionly.ui.components.detail.DetailScreenColorAndSizeSelectorComponent
 import com.example.fashionly.ui.components.detail.DetailScreenExplanationComponent
@@ -78,6 +79,7 @@ fun CheckoutContent(onAction: (UiAction) -> Unit) {
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
         ) {
+            CheckoutTopBar()
 
         } //  End of Column
 
