@@ -51,12 +51,14 @@ fun HomeListItem(
     typeText: String,
     priceText: String,
     ratingText: String,
+    onItemClick: () -> Unit
 ) {
     var isFav by remember { mutableStateOf(false) }
 
     MaterialTheme {
         Box(
             modifier = Modifier
+                .clickable(onClick = onItemClick)
                 .background(color = Color.White)
                 .padding(horizontal = 16.dp, vertical = 8.dp)
                 .width(LocalConfiguration.current.screenWidthDp.dp / 3)
@@ -167,7 +169,8 @@ fun HomeListItemPreview() {
             nameText = "Modern Light Clothes",
             typeText = "T-Shirt",
             priceText = "$212.99",
-            ratingText = "4.5"
+            ratingText = "4.5",
+            onItemClick = {}
         )
     }
 }

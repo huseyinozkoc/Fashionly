@@ -52,7 +52,7 @@ fun CheckoutScreen(
         uiEffect.collect { effect ->
             when (effect) {
                 is UiEffect.NavigateToSplash -> {
-                    navController.navigate("Splash")
+                    navController.navigate("Home")
                 }
 
                 is UiEffect.NavigateToDetail -> {
@@ -99,17 +99,15 @@ fun CheckoutContent(onAction: (UiAction) -> Unit) {
             CheckoutInfoComponent()
 
             Spacer(modifier = Modifier.height(100.dp))
-
-
-
-
         } //  End of Column
 
         Box(modifier = Modifier
             .fillMaxWidth()
             .padding(16.dp)
             .align(Alignment.BottomCenter)) {
-            CheckoutPayButton()
+            CheckoutPayButton() {
+                onAction(UiAction.NavigateToSplash)
+            }
         }
 
     }

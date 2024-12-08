@@ -109,7 +109,9 @@ fun DetailContent(onAction: (UiAction) -> Unit) {
             .fillMaxWidth()
             .padding(16.dp)
             .align(Alignment.BottomCenter)) {
-            DetailScreenAddCardButton()
+            DetailScreenAddCardButton() {
+                onAction(UiAction.NavigateToCheckout)
+            }
         }
 
     }

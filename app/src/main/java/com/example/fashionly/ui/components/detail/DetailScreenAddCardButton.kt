@@ -1,6 +1,7 @@
 package com.example.fashionly.ui.components.detail
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -28,10 +29,11 @@ import com.example.fashionly.R
 
 
 @Composable
-fun DetailScreenAddCardButton() {
+fun DetailScreenAddCardButton(onButtonClick: () -> Unit ) {
     MaterialTheme {
         Box(
             modifier = Modifier
+                .clickable(onClick = onButtonClick)
                 .background(color = Color.Black, shape = RoundedCornerShape(24.dp))
                 .padding(horizontal = 16.dp)
                 .height(50.dp)
@@ -91,6 +93,6 @@ fun DetailScreenAddCardButton() {
 @Composable
 fun DetailScreenAddCardButtonPreview() {
     MaterialTheme {
-        DetailScreenAddCardButton()
+        DetailScreenAddCardButton(onButtonClick = {})
     }
 }

@@ -82,7 +82,9 @@ fun HomeContent(onAction: (UiAction) -> Unit) {
                 HomeSearchComponent()
             }
             item {
-                HomeListComponent(homeChipData)
+                HomeListComponent(homeChipData) {
+                    onAction(UiAction.NavigateToDetail)
+                }
             }
         }
     }

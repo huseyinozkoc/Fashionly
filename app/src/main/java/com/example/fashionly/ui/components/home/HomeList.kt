@@ -26,7 +26,7 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun HomeListComponent(homeChipData: List<HomeChipModel>) {
+fun HomeListComponent(homeChipData: List<HomeChipModel>,onItemClick: () -> Unit) {
     val pagerState = rememberPagerState(
         initialPage = 0,
         initialPageOffsetFraction = 0f,
@@ -76,7 +76,8 @@ fun HomeListComponent(homeChipData: List<HomeChipModel>) {
                             nameText = homeChipData[page].items[index].nameText,
                             typeText = homeChipData[page].items[index].typeText,
                             priceText = homeChipData[page].items[index].priceText,
-                            ratingText = homeChipData[page].items[index].ratingText
+                            ratingText = homeChipData[page].items[index].ratingText,
+                            onItemClick = onItemClick
                         )
                         Spacer(modifier = Modifier.height(8.dp))
                     }
@@ -90,7 +91,7 @@ fun HomeListComponent(homeChipData: List<HomeChipModel>) {
 @Composable
 fun HomeListComponentPreview() {
     MaterialTheme {
-        HomeListComponent(homeChipData)
+        HomeListComponent(homeChipData, onItemClick = {})
     }
 }
 
