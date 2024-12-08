@@ -2,7 +2,10 @@ package com.example.fashionly.ui.detail
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -15,6 +18,8 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.fashionly.ui.components.EmptyScreen
 import com.example.fashionly.ui.components.LoadingBar
+import com.example.fashionly.ui.components.detail.DetailScreenExplanationComponent
+import com.example.fashionly.ui.components.detail.DetailScreenImageComponent
 import com.example.fashionly.ui.detail.DetailContract.UiAction
 import com.example.fashionly.ui.detail.DetailContract.UiEffect
 import com.example.fashionly.ui.detail.DetailContract.UiState
@@ -26,7 +31,7 @@ fun DetailScreen(
     uiState: UiState,
     uiEffect: Flow<UiEffect>,
     onAction: (UiAction) -> Unit,
-    navController : NavController
+    navController: NavController
 ) {
 
     LaunchedEffect(uiEffect) {
@@ -45,19 +50,25 @@ fun DetailScreen(
         else -> DetailContent(onAction)
     }
 }
+
 @Composable
 fun DetailContent(onAction: (UiAction) -> Unit) {
     Box(
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier
+            .fillMaxSize()
             .clickable(onClick = {
-                onAction(UiAction.NavigateToCheckout)
             }),
         contentAlignment = Alignment.Center,
     ) {
-        Text(
-            text = "Detail Content",
-            fontSize = 24.sp,
-        )
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+        ) {
+            DetailScreenImageComponent()
+            DetailScreenExplanationComponent()
+        }
+
     }
 }
 
@@ -66,7 +77,7 @@ fun DetailContent(onAction: (UiAction) -> Unit) {
 fun DetailScreenPreview(
     @PreviewParameter(DetailScreenPreviewProvider::class) uiState: UiState,
 ) {
-    val navController= rememberNavController()
+    val navController = rememberNavController()
 
     DetailScreen(
         uiState = uiState,
