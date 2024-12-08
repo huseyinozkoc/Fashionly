@@ -3,8 +3,10 @@ package com.example.fashionly.ui.checkout
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -26,6 +28,7 @@ import com.example.fashionly.ui.components.LoadingBar
 import com.example.fashionly.ui.checkout.CheckoutContract.UiAction
 import com.example.fashionly.ui.checkout.CheckoutContract.UiEffect
 import com.example.fashionly.ui.checkout.CheckoutContract.UiState
+import com.example.fashionly.ui.components.checkout.CheckoutInfoComponent
 import com.example.fashionly.ui.components.checkout.CheckoutPayButton
 import com.example.fashionly.ui.components.checkout.CheckoutTopBar
 import com.example.fashionly.ui.components.detail.DetailScreenAddCardButton
@@ -80,6 +83,10 @@ fun CheckoutContent(onAction: (UiAction) -> Unit) {
                 .verticalScroll(rememberScrollState())
         ) {
             CheckoutTopBar()
+
+            Spacer(modifier = Modifier.height(4.dp))
+
+            CheckoutInfoComponent()
 
         } //  End of Column
 
