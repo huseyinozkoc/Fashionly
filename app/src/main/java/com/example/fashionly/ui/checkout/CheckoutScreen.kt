@@ -2,14 +2,22 @@ package com.example.fashionly.ui.checkout
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
@@ -18,6 +26,11 @@ import com.example.fashionly.ui.components.LoadingBar
 import com.example.fashionly.ui.checkout.CheckoutContract.UiAction
 import com.example.fashionly.ui.checkout.CheckoutContract.UiEffect
 import com.example.fashionly.ui.checkout.CheckoutContract.UiState
+import com.example.fashionly.ui.components.checkout.CheckoutPayButton
+import com.example.fashionly.ui.components.detail.DetailScreenAddCardButton
+import com.example.fashionly.ui.components.detail.DetailScreenColorAndSizeSelectorComponent
+import com.example.fashionly.ui.components.detail.DetailScreenExplanationComponent
+import com.example.fashionly.ui.components.detail.DetailScreenImageComponent
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 
@@ -57,14 +70,24 @@ fun CheckoutContent(onAction: (UiAction) -> Unit) {
         modifier = Modifier
             .fillMaxSize()
             .clickable(onClick = {
-                onAction(UiAction.NavigateToDetail)
             }),
         contentAlignment = Alignment.Center,
     ) {
-        Text(
-            text = "Checkout Content",
-            fontSize = 24.sp,
-        )
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+        ) {
+
+        } //  End of Column
+
+        Box(modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp)
+            .align(Alignment.BottomCenter)) {
+            CheckoutPayButton()
+        }
+
     }
 }
 

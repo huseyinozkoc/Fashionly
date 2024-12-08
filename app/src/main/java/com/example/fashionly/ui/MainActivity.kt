@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
             MyappTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     val navController = rememberNavController()
-                    val startDestination = "Detail"
+                    val startDestination = "Checkout"
                     NavigationGraph(
                         navController = navController,
                         startDestination = startDestination,
