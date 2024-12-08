@@ -3,7 +3,8 @@
 - [📍 Overview](#-overview)
 - [📍 Key Features](#-keyfeatures)
 - [🚀 Screenshots](#-Screenshots)
--  [🧩Description](#-Description)
+- [🧩Description](#-Description)
+- [🧩Components](#-Componenets)
 ---
 
 ## 📍 Overview
@@ -66,3 +67,51 @@ The Fashionly project began as a way for me to utilize my weekends productively.
 
 **You can access the Figma design link here:**
 https://www.figma.com/community/file/1169625825293818878
+
+
+## 🧩Components
+Here you can see the basic components I created using Jetpack Compose while designing the Fashionly application.
+
+### Checkout Components
+---
+
+| Screen Name      | Screenshot                                                                                      |
+|------------------|-------------------------------------------------------------------------------------------------|
+| **Checkout Screen 1** | ![1](https://github.com/user-attachments/assets/ac56e169-37d9-4a8e-8dfe-34a643657612)      |
+| **Checkout Screen 2** | ![2](https://github.com/user-attachments/assets/82d02306-d68f-41fd-be02-876bdd791995)      |
+| **Checkout Screen 3** | ![3](https://github.com/user-attachments/assets/36e0e499-d9bd-4d22-aa78-fb5c4a61c823)      |
+| **Checkout Screen 4** | ![4](https://github.com/user-attachments/assets/6286b771-1c01-4cf5-b3ea-f94ef4455788)      |
+| **Checkout Screen 5** | ![5](https://github.com/user-attachments/assets/15511bf9-a42c-4047-af93-b84dc8d8ee75)      |
+| **Checkout Screen 6** | ![6](https://github.com/user-attachments/assets/bf6ca703-6a8c-409f-9c7e-dcfab4831c80)      |
+
+---
+
+### Detail Components
+
+---
+
+| Screen Name      | Screenshot                                                                                      |
+|------------------|-------------------------------------------------------------------------------------------------|
+| **Detail Screen 1** | ![7](https://github.com/user-attachments/assets/11816fb6-0a93-4fe0-8f50-b04a6a802b3a)        |
+| **Detail Screen 2** | ![8](https://github.com/user-attachments/assets/f051df25-212f-41a2-8b90-ef91b964c54c)        |
+| **Detail Screen 3** | ![9](https://github.com/user-attachments/assets/51c773e1-b2e9-4096-aef5-3df33759dd0d)        |
+| **Detail Screen 4** | ![10](https://github.com/user-attachments/assets/d0984e89-899a-47ef-a6c8-de30a522cd49)       |
+
+---
+
+### Home Components
+
+---
+
+| Screen Name      | Screenshot                                                                                      |
+|------------------|-------------------------------------------------------------------------------------------------|
+| **Home Screen 1** | ![11](https://github.com/user-attachments/assets/1abf1db3-a075-44f5-b156-dfeebe536bac)         |
+| **Home Screen 2** | ![12](https://github.com/user-attachments/assets/77307132-82f7-4ba7-ab1f-163d078d92f6)         |
+| **Home Screen 3** | ![13](https://github.com/user-attachments/assets/ec18e101-227e-4c1e-a94a-b8ef39fec45f)         |
+| **Home Screen 4** | ![14](https://github.com/user-attachments/assets/e6377f2f-0628-4792-8b36-e61a809d0f4e)         |
+| **Home Screen 5** | ![15](https://github.com/user-attachments/assets/a2dd8bab-7f4d-4458-b1a0-0b0907541dae)         |
+
+---
+
+
+
