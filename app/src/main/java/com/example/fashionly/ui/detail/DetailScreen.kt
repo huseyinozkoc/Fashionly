@@ -3,9 +3,11 @@ package com.example.fashionly.ui.detail
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.HorizontalDivider
@@ -23,6 +25,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.fashionly.ui.components.EmptyScreen
 import com.example.fashionly.ui.components.LoadingBar
+import com.example.fashionly.ui.components.detail.DetailScreenAddCardButton
 import com.example.fashionly.ui.components.detail.DetailScreenColorAndSizeSelectorComponent
 import com.example.fashionly.ui.components.detail.DetailScreenExplanationComponent
 import com.example.fashionly.ui.components.detail.DetailScreenImageComponent
@@ -76,7 +79,8 @@ fun DetailContent(onAction: (UiAction) -> Unit) {
             HorizontalDivider(
                 color = Color.LightGray,
                 thickness = 0.5.dp,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
                     .padding(vertical = 4.dp)
             )
 
@@ -85,7 +89,8 @@ fun DetailContent(onAction: (UiAction) -> Unit) {
             HorizontalDivider(
                 color = Color.LightGray,
                 thickness = 0.5.dp,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
                     .padding(vertical = 16.dp)
             )
 
@@ -94,9 +99,17 @@ fun DetailContent(onAction: (UiAction) -> Unit) {
             HorizontalDivider(
                 color = Color.LightGray,
                 thickness = 0.5.dp,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
                     .padding(vertical = 16.dp)
             )
+        } //  End of Column
+
+        Box(modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp)
+            .align(Alignment.BottomCenter)) {
+            DetailScreenAddCardButton()
         }
 
     }
