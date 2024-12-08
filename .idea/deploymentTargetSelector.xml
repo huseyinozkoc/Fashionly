@@ -16,6 +16,9 @@
       <SelectionState runConfigName="DetailScreenPreview (uiState 1)">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="CheckoutListItemPreview">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
     </selectionStates>
   </component>
 </project>

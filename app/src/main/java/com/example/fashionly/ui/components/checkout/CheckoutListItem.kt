@@ -54,6 +54,7 @@ fun CheckoutListItem(item: CheckoutItem) {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
+                .padding(vertical = 16.dp)
                 .height(100.dp),
             contentAlignment = Alignment.Center
         ) {
@@ -68,7 +69,6 @@ fun CheckoutListItem(item: CheckoutItem) {
                     Box(
                         modifier = Modifier
                             .fillMaxSize()
-                            .padding(8.dp)
                             .clip(RoundedCornerShape(16.dp))
                     ) {
                         Image(

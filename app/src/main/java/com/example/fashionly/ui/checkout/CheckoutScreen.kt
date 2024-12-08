@@ -29,6 +29,7 @@ import com.example.fashionly.ui.checkout.CheckoutContract.UiAction
 import com.example.fashionly.ui.checkout.CheckoutContract.UiEffect
 import com.example.fashionly.ui.checkout.CheckoutContract.UiState
 import com.example.fashionly.ui.components.checkout.CheckoutInfoComponent
+import com.example.fashionly.ui.components.checkout.CheckoutList
 import com.example.fashionly.ui.components.checkout.CheckoutPayButton
 import com.example.fashionly.ui.components.checkout.CheckoutTopBar
 import com.example.fashionly.ui.components.detail.DetailScreenAddCardButton
@@ -84,9 +85,15 @@ fun CheckoutContent(onAction: (UiAction) -> Unit) {
         ) {
             CheckoutTopBar()
 
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(8.dp))
+
+            CheckoutList()
+
+            Spacer(modifier = Modifier.height(8.dp))
 
             CheckoutInfoComponent()
+
+
 
         } //  End of Column
 
