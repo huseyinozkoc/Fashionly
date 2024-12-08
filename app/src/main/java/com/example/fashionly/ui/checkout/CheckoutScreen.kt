@@ -28,6 +28,7 @@ import com.example.fashionly.ui.components.LoadingBar
 import com.example.fashionly.ui.checkout.CheckoutContract.UiAction
 import com.example.fashionly.ui.checkout.CheckoutContract.UiEffect
 import com.example.fashionly.ui.checkout.CheckoutContract.UiState
+import com.example.fashionly.ui.components.checkout.CheckoutDropdownMenu
 import com.example.fashionly.ui.components.checkout.CheckoutInfoComponent
 import com.example.fashionly.ui.components.checkout.CheckoutList
 import com.example.fashionly.ui.components.checkout.CheckoutPayButton
@@ -91,7 +92,14 @@ fun CheckoutContent(onAction: (UiAction) -> Unit) {
 
             Spacer(modifier = Modifier.height(8.dp))
 
+            CheckoutDropdownMenu()
+
+            Spacer(modifier = Modifier.height(16.dp))
+
             CheckoutInfoComponent()
+
+            Spacer(modifier = Modifier.height(100.dp))
+
 
 
 
